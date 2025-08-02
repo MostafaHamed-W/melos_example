@@ -17,3 +17,11 @@ dev_dependencies:
 
 melos:
 # Setup scripts that will be run across all packages.
+  scripts:
+    build:
+      run: dart run build_runner build --delete-conflicting-outputs
+      exec:
+        concurrency: 4
+      packageFilters:
+        dependsOn: build_runner
+    
