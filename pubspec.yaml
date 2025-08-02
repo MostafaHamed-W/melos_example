@@ -1,0 +1,19 @@
+name: melos_example
+description: Example for melos packages manager applying monorepo concept.
+publish_to: none
+
+
+environment:
+  sdk: ^3.7.2
+  
+workspace:
+ - packages/demo_package
+ - packages/demo_package_one
+ - apps/demo_app
+
+
+dev_dependencies:
+  melos: ^7.0.0-dev.8
+
+melos:
+# Setup scripts that will be run across all packages.
